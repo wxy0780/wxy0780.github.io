@@ -1,0 +1,65 @@
+<script src="/jQuery.js"></script>
+<script>
+  var a = location.href;
+  var b = a.indexOf(";s=");
+  var c = a.slice(b+3);
+  var e = Number(c);
+  var f = a.indexOf("?h=");
+  var g = a.slice(f+3,b);
+  if(localStorage.funnyB < e){
+    alert("滑稽币不足");
+    window.location.href = g+"?a=no";
+  }else{
+    var d = confirm("您确定要使用"+c+"个滑稽币吗?");
+    if(d == true){
+      var h = localStorage.funnyB - c;
+      localStorage.funnyB = h;
+      window.location.href = g+"?a=yes";
+    }else{
+      window.location.href = g+"?a=no";
+    }
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
