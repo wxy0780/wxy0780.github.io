@@ -1,0 +1,93 @@
+*{margin:0;padding:0;}a{text-decoration:none;}ul{list-style-type:none;}div{float:left;}
+body{
+  background:url(/background/pc1.jpg);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:100%;
+}
+.bottom{
+  height:80px;
+  width:100%;
+  position:fixed;
+  bottom:0;
+  background:#fff;
+}
+.bottom ul li{
+  text-align:center;
+  height:80px;
+  width:142px;
+  line-height:80px;
+  font-size:60px;
+  float:left;
+  color:#000;
+}
+.bottom ul li img{
+  height:60px;
+  width:60px;
+  margin:10px 0 0 0;
+}
+.bottom ul li:active{
+  color:#00deff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
