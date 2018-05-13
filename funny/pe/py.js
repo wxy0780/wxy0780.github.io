@@ -4,40 +4,14 @@ function funny_sui(){
   var funny_c = parseInt(funny_b);
   return funny_c;
 }
-function funny_jia(funny_Fa){
-  if(funny_Fa == 0){var funny_Fb = "☼";}
-  if(funny_Fa == 1){var funny_Fb = "♮";}
-  if(funny_Fa == 2){var funny_Fb = "▾";}
-  if(funny_Fa == 3){var funny_Fb = "░";}
-  if(funny_Fa == 4){var funny_Fb = "☒";}
-  if(funny_Fa == 5){var funny_Fb = "☽";}
-  if(funny_Fa == 6){var funny_Fb = "◗";}
-  if(funny_Fa == 7){var funny_Fb = "▀";}
-  if(funny_Fa == 8){var funny_Fb = "▻";}
-  if(funny_Fa == 9){var funny_Fb = "▿";}
-  if(funny_Fa == "☼"){var funny_Fb = 0;}
-  if(funny_Fa == "♮"){var funny_Fb = 1;}
-  if(funny_Fa == "▾"){var funny_Fb = 2;}
-  if(funny_Fa == "░"){var funny_Fb = 3;}
-  if(funny_Fa == "☒"){var funny_Fb = 4;}
-  if(funny_Fa == "☽"){var funny_Fb = 5;}
-  if(funny_Fa == "◗"){var funny_Fb = 6;}
-  if(funny_Fa == "▀"){var funny_Fb = 7;}
-  if(funny_Fa == "▻"){var funny_Fb = 8;}
-  if(funny_Fa == "▿"){var funny_Fb = 9;}
-  return funny_Fb;
-}
 function funny_mi(funny_Faa){
-  var funny_Fab = funny_Faa.length;
-  var funny_Fac = 0;
-  var funny_Fae = "";
-  while(funny_Fac != funny_Fab){
-    var funny_Fad = funny_Faa.slice(funny_Fac,funny_Fac+1);
-    var funny_Faf = funny_jia(funny_Fad);
-    funny_Fae = funny_Fae + funny_Faf;
-    funny_Fac++;
-  }
-  return funny_Fae;
+  time = new Date();
+  year=time.getFullYear();
+  months=time.getMonth();
+  month=months+1;
+  dates=time.getDate();
+  funny_Fab = Number(funny_Faa) / year / month / dates / 75369514;
+  return funny_Fab;
 }
 var funny_d = funny_sui();
 var funny_e = funny_sui();
@@ -47,14 +21,13 @@ if (funny_d == 0){window.location.href = "./py.html";}
 $(".funny .main").text("✺"+funny_g+"✺");
 $(".funny form").submit(function(){
   var funny_h = $("#py .inputa .inpu").val();
-  var funny_i = funny_h.slice(1,-1);
-  var funny_j = funny_i.slice(0,3);
-  var funny_k = funny_mi(funny_j);
-  if(funny_k == funny_g){
-    var funny_l = funny_i.slice(3);
-    var funny_m = funny_mi(funny_l);
-    localStorage.funnyB = Number(localStorage.funnyB) + Number(funny_m);
-    alert("您收到了"+funny_m+"个滑稽币");
+  var funA = funny_mi(funny_h);
+  var funB = funA.toString();
+  var funC = funB.slice(0,3);
+  var funD = funB.slice(3);
+  if(funC == funny_g){
+    localStorage.funnyB = Number(localStorage.funnyB) + Number(funD);
+    alert("您收到了"+funD+"个滑稽币");
     window.location.href = "./py.html";
   }else{
     alert("错误");

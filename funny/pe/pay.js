@@ -1,37 +1,11 @@
-function funny_jia(funny_Fa){
-  if(funny_Fa == 0){var funny_Fb = "☼";}
-  if(funny_Fa == 1){var funny_Fb = "♮";}
-  if(funny_Fa == 2){var funny_Fb = "▾";}
-  if(funny_Fa == 3){var funny_Fb = "░";}
-  if(funny_Fa == 4){var funny_Fb = "☒";}
-  if(funny_Fa == 5){var funny_Fb = "☽";}
-  if(funny_Fa == 6){var funny_Fb = "◗";}
-  if(funny_Fa == 7){var funny_Fb = "▀";}
-  if(funny_Fa == 8){var funny_Fb = "▻";}
-  if(funny_Fa == 9){var funny_Fb = "▿";}
-  if(funny_Fa == "☼"){var funny_Fb = 0;}
-  if(funny_Fa == "♮"){var funny_Fb = 1;}
-  if(funny_Fa == "▾"){var funny_Fb = 2;}
-  if(funny_Fa == "░"){var funny_Fb = 3;}
-  if(funny_Fa == "☒"){var funny_Fb = 4;}
-  if(funny_Fa == "☽"){var funny_Fb = 5;}
-  if(funny_Fa == "◗"){var funny_Fb = 6;}
-  if(funny_Fa == "▀"){var funny_Fb = 7;}
-  if(funny_Fa == "▻"){var funny_Fb = 8;}
-  if(funny_Fa == "▿"){var funny_Fb = 9;}
-  return funny_Fb;
-}
 function funny_mi(funny_Faa){
-  var funny_Fab = funny_Faa.length;
-  var funny_Fac = 0;
-  var funny_Fae = "";
-  while(funny_Fac != funny_Fab){
-    var funny_Fad = funny_Faa.slice(funny_Fac,funny_Fac+1);
-    var funny_Faf = funny_jia(funny_Fad);
-    funny_Fae = funny_Fae + funny_Faf;
-    funny_Fac++;
-  }
-  return funny_Fae;
+  time = new Date();
+  year=time.getFullYear();
+  months=time.getMonth();
+  month=months+1;
+  dates=time.getDate();
+  funny_Fab = year * month * dates * 75369514 * Number(funny_Faa);
+  return funny_Fab;
 }
 $(".funny form").submit(function(){
   var funny_B = $("#bugA").val();
@@ -45,9 +19,8 @@ $(".funny form").submit(function(){
     }else{
       var funny_D = localStorage.funnyB - funny_F;
       localStorage.funnyB = funny_D;
-      var funny_G = funny_mi(funny_B);
-      var funny_H = funny_mi(funny_C);
-      $("#bugC").val(">"+funny_G+funny_H+"<");
+      var funny_G = funny_mi(funny_B+funny_C);
+      $("#bugC").val(funny_G);
       alert("已转走,剩余"+localStorage.funnyB+"。\n请把下面的提币码发送给对方!");
     }
   }else{
